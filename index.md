@@ -12,7 +12,7 @@ title: Home
   {% for post in site.posts %}
     <li>
       <h3>
-        <a href="/blog/2024/03/19/first-post.html">{{ post.title }}</a>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h3>
       <p>{{ post.date | date: "%B %d, %Y" }}</p>
       {% if post.description %}
